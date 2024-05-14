@@ -1,10 +1,15 @@
-AnimationPlayer
+RayCast2D
+Node
 CollisionShape2D
+CollisionPolygon2D
+AnimatedSprite2D
+Timer
+Area2D
+AnimationPlayer
 Sprite2D
 AnimatableBody2D
 TileMap
 Tree
 StaticBody2D
 Camera2D
-AnimatedSprite2D
 CharacterBody2D

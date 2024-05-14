@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715626389
+::res://::1715690329
 ::res://assets/::1715626659
 ::res://assets/fonts/::1715626659
 PixelOperator8-Bold.ttf::FontFile::8202776661675042083::1715626659::1715626659::1::::<><>::
@@ -21,5 +21,9 @@ platforms.png::CompressedTexture2D::8633231142669429314::1715626659::1715626659:
 slime_green.png::CompressedTexture2D::4007102218241095977::1715626659::1715626659::1::::<><>::
 slime_purple.png::CompressedTexture2D::1070151106085526489::1715626659::1715626659::1::::<><>::
 world_tileset.png::CompressedTexture2D::2562200092992149344::1715626659::1715626659::1::::<><>::
-::res://scenes/::1715626384
-::res://scripts/::1715626389
+::res://scenes/::1715632820
+game.tscn::PackedScene::4207390305115417701::1715632820::0::1::::<><>::uid://cwyovtyfwcpai::::res://scenes/player.tscn<>uid://bcrfccy8xfpky::::res://assets/sprites/world_tileset.png<>uid://bb6cmmiwh7b8s::::res://scenes/platform.tscn
+platform.tscn::PackedScene::2520748744868208936::1715632809::0::1::::<><>::uid://dvaab5i4pxv2q::::res://assets/sprites/platforms.png
+player.tscn::PackedScene::6367429568366713684::1715632809::0::1::::<><>::res://scripts/player.gd<>uid://d15gppkkvb50q::::res://assets/sprites/knight.png
+::res://scripts/::1715631180
+player.gd::GDScript::-1::1715631180::0::1::::<>CharacterBody2D<>::
