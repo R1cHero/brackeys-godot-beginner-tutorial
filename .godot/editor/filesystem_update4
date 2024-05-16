@@ -1,8 +1,8 @@
-res://scenes/menu.tscn
-res://scripts/menu.gd
 res://scenes/game.tscn
 res://scenes/player.tscn
 res://scenes/platform.tscn
 res://scenes/coin.tscn
 res://scenes/kill_zone.tscn
 res://scenes/slime.tscn
+res://scenes/menu.tscn
+res://scripts/kill_zone.gd

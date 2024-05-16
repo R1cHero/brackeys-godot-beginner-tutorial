@@ -1,7 +1,7 @@
+AudioStreamPlayer2D
 Camera2D
 Button
 AnimationPlayer
-AudioStreamPlayer2D
 Node
 Label
 RayCast2D
@@ -12,4 +12,3 @@ Timer
 Area2D
 Sprite2D
 AnimatableBody2D
-TileMap
