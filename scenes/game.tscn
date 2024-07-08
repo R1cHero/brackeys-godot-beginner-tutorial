@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b07ddr1uih8mr"]
+[gd_scene load_steps=16 format=3 uid="uid://b07ddr1uih8mr"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_pbh5n"]
 [ext_resource type="PackedScene" uid="uid://cwyovtyfwcpai" path="res://scenes/player.tscn" id="1_tnyc7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b1xlka3fofpw2" path="res://scenes/kill_zone.tscn" id="4_dw075"]
 [ext_resource type="PackedScene" uid="uid://bsvnh45hkqvu1" path="res://scenes/slime.tscn" id="6_vj7ho"]
 [ext_resource type="FontFile" uid="uid://byk2mu442w6h6" path="res://assets/fonts/PixelOperator8.ttf" id="7_2b1mp"]
+[ext_resource type="Script" path="res://scripts/changescene.gd" id="9_1fw4d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r6u8"]
 texture = ExtResource("2_chiwp")
@@ -575,3 +576,8 @@ theme_override_font_sizes/font_size = 8
 text = "v1.0"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="ChangeScene" type="Area2D" parent="."]
+script = ExtResource("9_1fw4d")
+
+[connection signal="body_entered" from="ChangeScene" to="ChangeScene" method="_on_body_entered"]
