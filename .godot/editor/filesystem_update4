@@ -1,1 +1,4 @@
-res://scenes/game.tscn
+res://scripts/coin.gd
+res://scripts/changescene.gd
+res://scripts/kill_zone.gd
+res://scripts/game_manager.gd

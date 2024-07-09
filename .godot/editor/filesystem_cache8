@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720467116
+::res://::1720468518
 default_bus_layout.tres::AudioBusLayout::7243678634874014248::1715856703::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1715856703::0::1::::<><>::
 README.md::TextFile::-1::1715856703::0::1::::<><>::
@@ -14,7 +14,7 @@ plugin.cfg::TextFile::-1::1712608203::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1712608203::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1712608203
 ::res://addons/godot-git-plugin/macos/::1712608203
-::res://addons/godot-git-plugin/win64/::1712608203
+::res://addons/godot-git-plugin/win64/::1720468514
 ::res://assets/::1715856703
 ::res://assets/fonts/::1715856703
 PixelOperator8-Bold.ttf::FontFile::8202776661675042083::1715856703::1715856703::1::::<><>::
@@ -36,9 +36,9 @@ platforms.png::CompressedTexture2D::8633231142669429314::1715856703::1715856703:
 slime_green.png::CompressedTexture2D::4007102218241095977::1715856703::1715856703::1::::<><>::
 slime_purple.png::CompressedTexture2D::1070151106085526489::1715856703::1715856703::1::::<><>::
 world_tileset.png::CompressedTexture2D::2562200092992149344::1715856703::1715856703::1::::<><>::
-::res://scenes/::1718637590
+::res://scenes/::1720467835
 coin.tscn::PackedScene::6308866234523543747::1718637590::0::1::::<><>::res://scripts/coin.gd<>uid://bmtmjimxr5rjo::::res://assets/sprites/coin.png<>uid://n30uopxhjpdg::::res://assets/sounds/coin.wav
-game.tscn::PackedScene::4207390305115417701::1718637590::0::1::::<><>::res://scripts/game_manager.gd<>uid://cwyovtyfwcpai::::res://scenes/player.tscn<>uid://bcrfccy8xfpky::::res://assets/sprites/world_tileset.png<>uid://bb6cmmiwh7b8s::::res://scenes/platform.tscn<>uid://cv5cdtsv86xnf::::res://scenes/coin.tscn<>uid://b1xlka3fofpw2::::res://scenes/kill_zone.tscn<>uid://bsvnh45hkqvu1::::res://scenes/slime.tscn<>uid://byk2mu442w6h6::::res://assets/fonts/PixelOperator8.ttf<>res://scripts/changescene.gd
+game.tscn::PackedScene::4207390305115417701::1720467835::0::1::::<><>::res://scripts/game_manager.gd<>uid://cwyovtyfwcpai::::res://scenes/player.tscn<>uid://bcrfccy8xfpky::::res://assets/sprites/world_tileset.png<>uid://bb6cmmiwh7b8s::::res://scenes/platform.tscn<>uid://cv5cdtsv86xnf::::res://scenes/coin.tscn<>uid://b1xlka3fofpw2::::res://scenes/kill_zone.tscn<>uid://bsvnh45hkqvu1::::res://scenes/slime.tscn<>uid://byk2mu442w6h6::::res://assets/fonts/PixelOperator8.ttf<>res://scripts/changescene.gd
 kill_zone.tscn::PackedScene::4259497094985422059::1718637590::0::1::::<><>::res://scripts/kill_zone.gd<>uid://ukd4oqqhld7l::::res://assets/sounds/hurt.wav
 level2.tscn::PackedScene::1087043729814789049::1718637590::0::1::::<><>::res://scripts/game_manager.gd<>uid://byk2mu442w6h6::::res://assets/fonts/PixelOperator8.ttf<>uid://bcrfccy8xfpky::::res://assets/sprites/world_tileset.png<>uid://cwyovtyfwcpai::::res://scenes/player.tscn<>uid://b1xlka3fofpw2::::res://scenes/kill_zone.tscn<>uid://bb6cmmiwh7b8s::::res://scenes/platform.tscn<>uid://cv5cdtsv86xnf::::res://scenes/coin.tscn<>uid://bsvnh45hkqvu1::::res://scenes/slime.tscn
 menu.tscn::PackedScene::703161914762157289::1718637590::0::1::::<><>::res://scripts/menu.gd<>uid://byk2mu442w6h6::::res://assets/fonts/PixelOperator8.ttf
