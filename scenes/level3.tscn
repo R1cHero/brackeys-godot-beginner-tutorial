@@ -1,15 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://pqtpl3iy7tg8"]
+[gd_scene load_steps=15 format=3 uid="uid://bbwynr6uj2fdw"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_jl8rq"]
-[ext_resource type="FontFile" uid="uid://byk2mu442w6h6" path="res://assets/fonts/PixelOperator8.ttf" id="2_ni881"]
-[ext_resource type="Texture2D" uid="uid://bcrfccy8xfpky" path="res://assets/sprites/world_tileset.png" id="3_76emm"]
-[ext_resource type="PackedScene" uid="uid://cwyovtyfwcpai" path="res://scenes/player.tscn" id="4_2inxf"]
-[ext_resource type="PackedScene" uid="uid://b1xlka3fofpw2" path="res://scenes/kill_zone.tscn" id="5_n5ish"]
-[ext_resource type="PackedScene" uid="uid://ng2msi3bekbl" path="res://scenes/platform_yellow.tscn" id="7_3hft2"]
-[ext_resource type="PackedScene" uid="uid://cv5cdtsv86xnf" path="res://scenes/coin.tscn" id="7_5j2nn"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_8tnfi"]
+[ext_resource type="Texture2D" uid="uid://bcrfccy8xfpky" path="res://assets/sprites/world_tileset.png" id="2_skfhp"]
+[ext_resource type="PackedScene" uid="uid://cwyovtyfwcpai" path="res://scenes/player.tscn" id="3_2jy7s"]
+[ext_resource type="PackedScene" uid="uid://b1xlka3fofpw2" path="res://scenes/kill_zone.tscn" id="4_qcmep"]
+[ext_resource type="PackedScene" uid="uid://ng2msi3bekbl" path="res://scenes/platform_yellow.tscn" id="5_gbjw3"]
+[ext_resource type="PackedScene" uid="uid://cv5cdtsv86xnf" path="res://scenes/coin.tscn" id="6_nsldv"]
+[ext_resource type="FontFile" uid="uid://byk2mu442w6h6" path="res://assets/fonts/PixelOperator8.ttf" id="7_4wxdx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r6u8"]
-texture = ExtResource("3_76emm")
+texture = ExtResource("2_skfhp")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -447,7 +447,7 @@ _data = {
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_jl8rq")
+script = ExtResource("1_8tnfi")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vc5ny")
@@ -457,7 +457,7 @@ layer_0/tile_data = PackedInt32Array(196594, 0, 15, 262130, 0, 15, 327666, 0, 15
 layer_1/name = "Mid"
 layer_1/tile_data = PackedInt32Array(65530, 458752, 0, 65531, 458752, 0, 65532, 458752, 0, 65533, 458752, 0, 65534, 458752, 0, 65535, 393216, 0, 65536, 393216, 0, 131073, 393216, 0, 131071, 393216, 1, 196607, 393216, 1, 262143, 393216, 1, 196608, 393216, 1, 131072, 393216, 1, 196606, 393216, 1, 196605, 393216, 1, 131069, 524288, 0, 131068, 393216, 1, 131067, 393216, 1, 131066, 393216, 1, 131070, 393216, 1, 196604, 393216, 1, 196603, 393216, 1, 196602, 393216, 1, 262142, 393216, 1, 262141, 393216, 1, 262140, 524288, 1, 262139, 393216, 1, 262138, 393216, 1, 327674, 393216, 1, 327675, 393216, 1, 327676, 393216, 1, 327677, 393216, 1, 327678, 393216, 1, 327679, 393216, 1, 262144, 524288, 1, 196610, 393216, 0, 196611, 393216, 0, 196612, 393216, 0, 196613, 393216, 0, 196614, 393216, 0, 196615, 393216, 0, 196616, 393216, 0, 196609, 393216, 1, 262145, 393216, 1)
 
-[node name="Player" parent="." instance=ExtResource("4_2inxf")]
+[node name="Player" parent="." instance=ExtResource("3_2jy7s")]
 z_index = 5
 position = Vector2(-31, -5)
 
@@ -467,7 +467,7 @@ zoom = Vector2(4, 4)
 limit_bottom = 120
 position_smoothing_enabled = true
 
-[node name="KillZone" parent="." instance=ExtResource("5_n5ish")]
+[node name="KillZone" parent="." instance=ExtResource("4_qcmep")]
 position = Vector2(2, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
@@ -475,7 +475,7 @@ shape = SubResource("WorldBoundaryShape2D_cib0o")
 
 [node name="Platforms" type="Node" parent="."]
 
-[node name="Platform3" parent="Platforms" instance=ExtResource("7_3hft2")]
+[node name="Platform3" parent="Platforms" instance=ExtResource("5_gbjw3")]
 position = Vector2(162, 53)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3"]
@@ -486,8 +486,8 @@ autoplay = "move"
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin2" parent="Coins" instance=ExtResource("7_5j2nn")]
-position = Vector2(-103, -39)
+[node name="Coin2" parent="Coins" instance=ExtResource("6_nsldv")]
+position = Vector2(87, 40)
 
 [node name="Labels" type="Node" parent="."]
 
@@ -497,7 +497,7 @@ offset_top = -59.0
 offset_right = 42.0
 offset_bottom = -36.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("2_ni881")
+theme_override_fonts/font = ExtResource("7_4wxdx")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump"
 

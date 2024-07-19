@@ -53,3 +53,7 @@ func get_gravity (velocity: Vector2):
 
 func _on_area_2d_body_entered(body:CharacterBody2D):
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+
+
+func _on_change_scene_body_entered(body:CharacterBody2D):
+	get_tree().change_scene_to_file("res://scenes/level3.tscn")
