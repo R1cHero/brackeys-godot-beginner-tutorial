@@ -1,6 +1,6 @@
+res://scripts/player.gd
 res://scenes/game.tscn
 res://scenes/level2.tscn
 res://scenes/player.tscn
 res://scenes/slime.tscn
 res://scenes/menu.tscn
-res://scripts/player.gd

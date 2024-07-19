@@ -1,19 +1,21 @@
 extends CharacterBody2D
 
 
-const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const SPEED := 130.0
+const JUMP_VELOCITY := -300.0
+const GRAVITY := 1000
+const FALL_GRAVITY := 1500
 
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += get_gravity(velocity) * delta
 
+	if Input.is_action_just_released("jump") and velocity.y < 0:
+		velocity.y = JUMP_VELOCITY / 4
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -44,6 +46,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+func get_gravity (velocity: Vector2):
+	if velocity.y < 0:
+		return GRAVITY
+	return FALL_GRAVITY
 
 func _on_area_2d_body_entered(body:CharacterBody2D):
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
