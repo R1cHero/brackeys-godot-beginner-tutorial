@@ -43,3 +43,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body:CharacterBody2D):
+	get_tree().change_scene_to_file("res://scenes/level2.tscn")
