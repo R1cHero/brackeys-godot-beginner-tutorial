@@ -1,4 +1,12 @@
+res://scripts/main.gd
 res://scripts/coin.gd
+res://scenes/game.tscn
 res://scripts/changescene.gd
+res://scenes/Area2D.gd
+res://scripts/player.gd
+res://scenes/level2.tscn
+res://scenes/player.tscn
+res://scenes/slime.tscn
+res://scenes/menu.tscn
 res://scripts/kill_zone.gd
-res://scripts/game_manager.gd
+res://scenes/kill_zone.tscn
