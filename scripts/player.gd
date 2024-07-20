@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED := 130.0
 const JUMP_VELOCITY := -300.0
 const GRAVITY := 1000
@@ -53,9 +52,7 @@ func get_gravity ():
 
 func _on_area_2d_body_entered(_body):
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
-	call.call_deferred()
 
 
 func _on_change_scene_body_entered(_body):
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
-	call.call_deferred()
