@@ -449,6 +449,19 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_8tnfi")
 
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 1019.0
+offset_top = -101.0
+offset_right = 1140.0
+offset_bottom = -78.0
+theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
+theme_override_fonts/font = ExtResource("7_4wxdx")
+theme_override_font_sizes/font_size = 8
+text = "You collected X coins"
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vc5ny")
 format = 2
@@ -490,16 +503,6 @@ autoplay = "move"
 position = Vector2(87, 40)
 
 [node name="Labels" type="Node" parent="."]
-
-[node name="Label" type="Label" parent="Labels"]
-offset_left = -49.0
-offset_top = -59.0
-offset_right = 42.0
-offset_bottom = -36.0
-theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("7_4wxdx")
-theme_override_font_sizes/font_size = 8
-text = "Space to jump"
 
 [node name="Change Scene" type="Area2D" parent="."]
 collision_mask = 2

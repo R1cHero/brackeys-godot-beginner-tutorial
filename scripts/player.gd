@@ -11,7 +11,7 @@ const FALL_GRAVITY := 1500
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += get_gravity(velocity) * delta
+		velocity.y += get_gravity() * delta
 
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y = JUMP_VELOCITY / 4
@@ -46,14 +46,16 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func get_gravity (velocity: Vector2):
+func get_gravity ():
 	if velocity.y < 0:
 		return GRAVITY
 	return FALL_GRAVITY
 
-func _on_area_2d_body_entered(body:CharacterBody2D):
+func _on_area_2d_body_entered(_body):
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+	call.call_deferred()
 
 
-func _on_change_scene_body_entered(body:CharacterBody2D):
+func _on_change_scene_body_entered(_body):
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
+	call.call_deferred()
