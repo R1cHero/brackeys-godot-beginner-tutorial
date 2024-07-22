@@ -453,14 +453,15 @@ script = ExtResource("1_jl8rq")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
 offset_left = 1021.0
-offset_top = -71.0
+offset_top = -65.0
 offset_right = 1142.0
-offset_bottom = -48.0
+offset_bottom = -42.0
 theme_override_colors/font_color = Color(0.956863, 0.6, 0.564706, 1)
 theme_override_fonts/font = ExtResource("2_ni881")
 theme_override_font_sizes/font_size = 8
 text = "You collected X coins"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
@@ -474,7 +475,7 @@ layer_1/tile_data = PackedInt32Array(65530, 458752, 0, 65531, 458752, 0, 65532, 
 
 [node name="Player" parent="." instance=ExtResource("4_2inxf")]
 z_index = 5
-position = Vector2(-31, -5)
+position = Vector2(-31, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, -8)
@@ -504,13 +505,13 @@ autoplay = "move"
 position = Vector2(480, 33)
 
 [node name="Platform4" parent="Platforms" instance=ExtResource("7_3hft2")]
-position = Vector2(935, 100)
+position = Vector2(950, 90)
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("7_3hft2")]
-position = Vector2(1000, 80)
+position = Vector2(1020, 50)
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("7_3hft2")]
-position = Vector2(1000, 30)
+position = Vector2(980, 10)
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("7_3hft2")]
 position = Vector2(553, 14)
@@ -521,27 +522,64 @@ position = Vector2(615, -3)
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("7_5j2nn")]
-position = Vector2(215, 40)
+position = Vector2(210, 38)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(230, 38)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(250, 38)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(270, 38)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(632, 150)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(872, 102)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(614, -16)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(600, -105)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(979, -3)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(1019, 37)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(552, 1)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("7_5j2nn")]
+position = Vector2(552, 150)
 
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = 474.0
-offset_top = 104.0
-offset_right = 595.0
-offset_bottom = 134.0
+anchors_preset = -1
+anchor_right = -0.0460069
+anchor_bottom = -0.0108025
+offset_left = 484.0
+offset_top = 126.0
+offset_right = 605.0
+offset_bottom = 156.0
 theme_override_colors/font_color = Color(1, 0.823529, 0.2, 1)
 theme_override_fonts/font = ExtResource("2_ni881")
 theme_override_font_sizes/font_size = 8
 text = "Oopps..."
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Change Scene" type="Area2D" parent="."]
+[node name="Finish" type="Area2D" parent="."]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Change Scene"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 position = Vector2(1112, -23)
 shape = SubResource("RectangleShape2D_vesyn")
 
@@ -551,4 +589,4 @@ position = Vector2(488, 160)
 [node name="Slime2" parent="." instance=ExtResource("8_l6cxp")]
 position = Vector2(775, 160)
 
-[connection signal="body_entered" from="Change Scene" to="Player" method="_on_change_scene_body_entered"]
+[connection signal="body_entered" from="Finish" to="Player" method="_on_change_scene_body_entered"]

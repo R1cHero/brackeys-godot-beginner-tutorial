@@ -504,11 +504,11 @@ position = Vector2(87, 40)
 
 [node name="Labels" type="Node" parent="."]
 
-[node name="Change Scene" type="Area2D" parent="."]
+[node name="Finish" type="Area2D" parent="."]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Change Scene"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 position = Vector2(131, 36)
 shape = SubResource("RectangleShape2D_vesyn")
 
-[connection signal="body_entered" from="Change Scene" to="Player" method="_on_change_scene_body_entered"]
+[connection signal="body_entered" from="Finish" to="Player" method="_on_change_scene_body_entered"]
