@@ -16,3 +16,4 @@ mono_crash.*.json
 
 # Addons
 addons/
+addons/godot-git-plugin
