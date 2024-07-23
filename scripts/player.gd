@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const SPEED := 130.0
-const JUMP_VELOCITY := -300.0
-const GRAVITY := 1000
+const JUMP_VELOCITY := -290.0
+const GRAVITY := 980
 const FALL_GRAVITY := 1500
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -15,7 +15,7 @@ func _physics_process(delta):
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y = JUMP_VELOCITY / 4
 	
-	# Handle jump.
+	# Handle jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
@@ -44,7 +44,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
+ 
+# Gravity calc
 func get_gravity ():
 	if velocity.y < 0:
 		return GRAVITY
