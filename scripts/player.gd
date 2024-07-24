@@ -6,6 +6,7 @@ const GRAVITY := 980
 const FALL_GRAVITY := 1500
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var jump = $Jump
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -18,6 +19,7 @@ func _physics_process(delta):
 	# Handle jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump.play(0)
 
 	# Get the input direction: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
