@@ -19,8 +19,9 @@ func _process(delta):
 	position.x += direction * SPEED * delta
 
 # BUG düşman ölürken bug var
-func _on_area_2d_body_entered(body):
-		if body.name == "Player":
-			self.queue_free()
-			death_sound.play(0)
-			# FIXME Ses gelmiyor düzelt amk
+
+func _on_enemy_death_body_entered(body):
+	if body.name == "Player":
+				death_sound.play(0)
+				await death_sound.finished
+				self.queue_free()
