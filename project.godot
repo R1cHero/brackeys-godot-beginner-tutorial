@@ -22,6 +22,10 @@ buses/default_bus_layout="res://soundeffects/default_bus_layout.tres"
 
 Music="*res://scenes/music.tscn"
 
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

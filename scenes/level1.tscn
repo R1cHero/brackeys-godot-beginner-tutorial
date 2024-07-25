@@ -601,4 +601,5 @@ collision_mask = 2
 position = Vector2(34, 19)
 shape = SubResource("RectangleShape2D_0exfi")
 
+[connection signal="enemy_kill" from="Player" to="Slime" method="_on_player_enemy_kill"]
 [connection signal="body_entered" from="Finish" to="Player" method="_on_area_2d_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bsvnh45hkqvu1"]
+[gd_scene load_steps=11 format=3 uid="uid://bsvnh45hkqvu1"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_7m3dr"]
 [ext_resource type="Texture2D" uid="uid://bxdcngvp6u61j" path="res://assets/sprites/slime_green.png" id="1_32edj"]
@@ -41,12 +41,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_7ftwl"]
-a = Vector2(-7.5, 6.66667)
-b = Vector2(7.5, 6.66667)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4isun"]
-size = Vector2(14, 8)
+size = Vector2(13, 8)
 
 [node name="Slime" type="Node2D"]
 script = ExtResource("1_7m3dr")
@@ -57,21 +53,13 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_07xl7")
 autoplay = "default"
 
-[node name="EnemyDeath" type="Area2D" parent="."]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDeath"]
-position = Vector2(4.76837e-07, -6)
-rotation = 3.14159
-scale = Vector2(1.2, 1.2)
-shape = SubResource("SegmentShape2D_7ftwl")
-
 [node name="KillZone" parent="." instance=ExtResource("2_ixt2g")]
 position = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_4isun")
+one_way_collision_margin = 0.0
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -6)
@@ -83,5 +71,3 @@ target_position = Vector2(-10, 0)
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_sh6o4")
-
-[connection signal="body_entered" from="EnemyDeath" to="." method="_on_enemy_death_body_entered"]

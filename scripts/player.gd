@@ -1,14 +1,19 @@
 extends CharacterBody2D
+signal enemy_kill
 
 const SPEED := 130.0
-const JUMP_VELOCITY := -290.0
-const GRAVITY := 980
+const JUMP_VELOCITY := -300.0
+const GRAVITY := 1000
 const FALL_GRAVITY := 1500
 
-@onready var animated_sprite = $AnimatedSprite2D
-@onready var jump = $Jump
+# Get the input direction: -1, 0, 1
+var direction := Input.get_axis("move_left", "move_right")
 
-func _physics_process(delta):
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump: AudioStreamPlayer2D = $Jump
+@onready var ray_cast_2d: RayCast2D = $RayCast2D
+
+func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += get_gravity() * delta
@@ -22,7 +27,7 @@ func _physics_process(delta):
 		jump.play(0)
 
 	# Get the input direction: -1, 0, 1
-	var direction = Input.get_axis("move_left", "move_right")
+	var direction: int = Input.get_axis("move_left", "move_right")
 	
 	# Flip the Sprite
 	if direction > 0:
@@ -48,14 +53,18 @@ func _physics_process(delta):
 	move_and_slide()
  
 # Gravity calc
-func get_gravity ():
+func get_gravity() -> int:
 	if velocity.y < 0:
 		return GRAVITY
 	return FALL_GRAVITY
 
-func _on_area_2d_body_entered(_body):
+func _on_area_2d_body_entered(body: Node) -> void:
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
 
 
-func _on_change_scene_body_entered(_body):
+func _on_change_scene_body_entered(body: Node) -> void:
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
+
+func _on_slime_enemy_kill() -> void:
+	if ray_cast_2d.is_colliding():
+		print("TEMAS VAR")
