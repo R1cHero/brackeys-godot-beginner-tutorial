@@ -189,8 +189,3 @@ shape = SubResource("RectangleShape2D_fmhw2")
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_u3k1x")
 volume_db = -15.0
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, -8)
-target_position = Vector2(0, 15)
-collision_mask = 2

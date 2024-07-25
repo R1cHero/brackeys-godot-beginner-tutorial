@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd8wjcaa13kfm"]
+
+[ext_resource type="Script" path="res://scripts/sound_manager.gd" id="1_0om6j"]
+
+[node name="SoundManager" type="Node2D"]
+script = ExtResource("1_0om6j")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]

@@ -1,8 +1,8 @@
 extends CharacterBody2D
-signal enemy_kill
 
+# HACK AREA MASK 2
 const SPEED := 130.0
-const JUMP_VELOCITY := -300.0
+const JUMP_VELOCITY := -280.0
 const GRAVITY := 1000
 const FALL_GRAVITY := 1500
 
@@ -11,7 +11,6 @@ var direction := Input.get_axis("move_left", "move_right")
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump: AudioStreamPlayer2D = $Jump
-@onready var ray_cast_2d: RayCast2D = $RayCast2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -64,7 +63,3 @@ func _on_area_2d_body_entered(body: Node) -> void:
 
 func _on_change_scene_body_entered(body: Node) -> void:
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
-
-func _on_slime_enemy_kill() -> void:
-	if ray_cast_2d.is_colliding():
-		print("TEMAS VAR")

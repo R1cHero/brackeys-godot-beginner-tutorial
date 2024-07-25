@@ -21,10 +21,15 @@ buses/default_bus_layout="res://soundeffects/default_bus_layout.tres"
 [autoload]
 
 Music="*res://scenes/music.tscn"
+SoundManager="*res://scenes/sound_manager.tscn"
 
 [debug]
 
 gdscript/warnings/untyped_declaration=2
+
+[display]
+
+window/size/resizable=false
 
 [editor]
 
