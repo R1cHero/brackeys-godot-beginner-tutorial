@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbwynr6uj2fdw"]
+[gd_scene load_steps=11 format=3 uid="uid://bbwynr6uj2fdw"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_8tnfi"]
 [ext_resource type="Texture2D" uid="uid://bcrfccy8xfpky" path="res://assets/sprites/world_tileset.png" id="2_skfhp"]
@@ -415,9 +415,6 @@ sources/0 = SubResource("TileSetAtlasSource_2r6u8")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cib0o"]
 distance = -80.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjdwt"]
-size = Vector2(14, 14)
-
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -447,7 +444,7 @@ layer_1/tile_data = PackedInt32Array(65530, 262144, 0, 65531, 262144, 0, 65532, 
 
 [node name="Player" parent="." instance=ExtResource("3_2jy7s")]
 z_index = 5
-position = Vector2(1077, -101)
+position = Vector2(1057, -83)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, -8)
@@ -519,12 +516,3 @@ position = Vector2(690, -32)
 
 [node name="Slime7" parent="Slime" instance=ExtResource("7_bsb3u")]
 position = Vector2(906, -48)
-
-[node name="Finish" type="Area2D" parent="."]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
-position = Vector2(1112, -23)
-shape = SubResource("RectangleShape2D_cjdwt")
-
-[connection signal="body_entered" from="Finish" to="Player" method="_on_finish_body_entered"]

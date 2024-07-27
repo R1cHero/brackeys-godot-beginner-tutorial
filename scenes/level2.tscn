@@ -557,6 +557,14 @@ position = Vector2(552, 1)
 [node name="Coin6" parent="Coins" instance=ExtResource("7_5j2nn")]
 position = Vector2(552, 150)
 
+[node name="Slimes" type="Node" parent="."]
+
+[node name="Slime" parent="Slimes" instance=ExtResource("8_l6cxp")]
+position = Vector2(488, 160)
+
+[node name="Slime2" parent="Slimes" instance=ExtResource("8_l6cxp")]
+position = Vector2(775, 160)
+
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
@@ -584,11 +592,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 position = Vector2(1112, -23)
 shape = SubResource("RectangleShape2D_vesyn")
-
-[node name="Slime" parent="." instance=ExtResource("8_l6cxp")]
-position = Vector2(488, 160)
-
-[node name="Slime2" parent="." instance=ExtResource("8_l6cxp")]
-position = Vector2(775, 160)
 
 [connection signal="body_entered" from="Finish" to="Player" method="_on_change_scene_body_entered"]

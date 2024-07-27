@@ -5,9 +5,6 @@ const JUMP_VELOCITY := -280.0
 const GRAVITY := 1000
 const FALL_GRAVITY := 1500
 
-# Get the input direction: -1, 0, 1
-var direction := Input.get_axis("move_left", "move_right")
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump: AudioStreamPlayer2D = $Jump
 
@@ -25,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		jump.play(0)
 
 	# Get the input direction: -1, 0, 1
-	var direction: int = Input.get_axis("move_left", "move_right")
+	var direction := Input.get_axis("move_left", "move_right")
 	
 	# Flip the Sprite
 	if direction > 0:
@@ -56,13 +53,8 @@ func get_gravity() -> int:
 		return GRAVITY
 	return FALL_GRAVITY
 
-func _on_area_2d_body_entered(body: Node) -> void:
+func _on_area_2d_body_entered() -> void:
 	get_tree().change_scene_to_file("res://scenes/level2.tscn")
 
-
-func _on_change_scene_body_entered(body: Node) -> void:
+func _on_change_scene_body_entered() -> void:
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
-
-
-func _on_finish_body_entered(body: Node) -> void:
-	get_tree().change_scene_to_file("res://scenes/finish.tscn")

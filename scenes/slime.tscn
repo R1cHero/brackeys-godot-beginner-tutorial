@@ -65,11 +65,11 @@ shape = SubResource("RectangleShape2D_4isun")
 one_way_collision_margin = 0.0
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(1, -6)
 target_position = Vector2(10, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(-1, -6)
 target_position = Vector2(-10, 0)
 
 [node name="EnemyKill" type="Area2D" parent="."]

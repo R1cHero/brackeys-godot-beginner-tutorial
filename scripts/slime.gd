@@ -18,6 +18,6 @@ func _process(delta: float) -> void:
 		animated_sprite.flip_h = false
 	position.x += direction * SPEED * delta
 
-func _on_enemy_kill_body_entered(body: Node) -> void:
+func _on_enemy_kill_body_entered() -> void:
 	#sound_manager.playmobDeathSound()
 	self.queue_free()
