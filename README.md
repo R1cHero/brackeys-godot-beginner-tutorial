@@ -1,5 +1,3 @@
-https://youtu.be/LOhfqjmasi0
-
 I watched <a href="https://youtu.be/LOhfqjmasi0">this tutorial</a> this tutorial and made the my first Godot game!
 
 ![resim](https://github.com/user-attachments/assets/0930a193-dfb4-44cf-84aa-115f592fabb3)
